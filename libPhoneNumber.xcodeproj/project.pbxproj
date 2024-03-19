@@ -113,6 +113,8 @@
 		34ACBBBB1B7124EF0064B3BD /* NBPhoneNumberUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = FD8B84311934C35F00C350EB /* NBPhoneNumberUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34ACBBBC1B7125290064B3BD /* NBMetadataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = FD12C2681A87401B00B53856 /* NBMetadataHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34ACBBBD1B7125450064B3BD /* NBAsYouTypeFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = FD8B84261934C35F00C350EB /* NBAsYouTypeFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		646A56162BA1B5990085B1AF /* libPhoneNumberiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34ACBB851B7122AC0064B3BD /* libPhoneNumberiOS.framework */; };
+		646A56172BA1B5990085B1AF /* libPhoneNumberiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 34ACBB851B7122AC0064B3BD /* libPhoneNumberiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7C7250801E0EBE7D00F916ED /* libPhoneNumbermacOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C72507E1E0EBE7D00F916ED /* libPhoneNumbermacOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C7250841E0EC01E00F916ED /* NBMetadataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FD12C2691A87401B00B53856 /* NBMetadataHelper.m */; };
 		7C7250871E0EC03400F916ED /* NBPhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8B842D1934C35F00C350EB /* NBPhoneNumber.m */; };
@@ -162,6 +164,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		646A56182BA1B5990085B1AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD7A0613167715A0004BBEB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34ACBB841B7122AC0064B3BD;
+			remoteInfo = libPhoneNumberiOS;
+		};
 		8B1FEF991EB7BF2B00FBDE87 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FD7A0613167715A0004BBEB6 /* Project object */;
@@ -170,6 +179,20 @@
 			remoteInfo = libPhoneNumberiOS;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		646A561A2BA1B5990085B1AF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				646A56172BA1B5990085B1AF /* libPhoneNumberiOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0F2870911FCF7936006230BF /* NBPhoneNumberUtil+ShortNumber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NBPhoneNumberUtil+ShortNumber.h"; sourceTree = "<group>"; };
@@ -264,6 +287,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				646A56162BA1B5990085B1AF /* libPhoneNumberiOS.framework in Frameworks */,
 				8B0FD2F81E4A85AE0049DF81 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -657,10 +681,12 @@
 				14B7A2BA1DE9D7F60051AED7 /* Sources */,
 				14B7A2BB1DE9D7F60051AED7 /* Frameworks */,
 				14B7A2BC1DE9D7F60051AED7 /* Resources */,
+				646A561A2BA1B5990085B1AF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				646A56192BA1B5990085B1AF /* PBXTargetDependency */,
 			);
 			name = MetadataGenerator;
 			productName = MetadataGenerator;
@@ -802,6 +828,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				Base,
 			);
 			mainGroup = FD7A0611167715A0004BBEB6;
@@ -1015,6 +1042,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		646A56192BA1B5990085B1AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34ACBB841B7122AC0064B3BD /* libPhoneNumberiOS */;
+			targetProxy = 646A56182BA1B5990085B1AF /* PBXContainerItemProxy */;
+		};
 		8B1FEF9A1EB7BF2B00FBDE87 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 34ACBB841B7122AC0064B3BD /* libPhoneNumberiOS */;
