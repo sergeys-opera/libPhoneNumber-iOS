@@ -413,9 +413,9 @@ static NSArray *PhoneNumberDescEntryForNationalNumberPattern(NSString *numberPat
   XCTAssertEqualObjects(@"0(?:(11|343|3715)15)?", metadata.nationalPrefixForParsing);
   XCTAssertEqualObjects(@"9$1", metadata.nationalPrefixTransformRule);
   XCTAssertEqualObjects(@"$2 15 $3-$4", ((NBNumberFormat *)metadata.numberFormats[2]).format);
-  XCTAssertEqualObjects(@"(9)(\\d{4})(\\d{2})(\\d{4})",
+  XCTAssertEqualObjects(@"(\\d)(\\d{4})(\\d{2})(\\d{4})",
                         ((NBNumberFormat *)metadata.numberFormats[3]).pattern);
-  XCTAssertEqualObjects(@"(9)(\\d{4})(\\d{2})(\\d{4})",
+  XCTAssertEqualObjects(@"(\\d)(\\d{4})(\\d{2})(\\d{4})",
                         ((NBNumberFormat *)metadata.intlNumberFormats[3]).pattern);
   XCTAssertEqualObjects(@"$1 $2 $3 $4", ((NBNumberFormat *)metadata.intlNumberFormats[3]).format);
 }

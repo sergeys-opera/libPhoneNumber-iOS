@@ -197,6 +197,12 @@
   NBPhoneNumber *phoneSouthernIllinois = [phoneUtil parse:@"730-220-9141" defaultRegion:@"US" error:nil];
   NSLog(@"- isValidNumber %@", [phoneUtil isValidNumber:phoneSouthernIllinois] ? @"Y" : @"N");
   NSLog(@"- isPossibleNumber %@", [phoneUtil isPossibleNumber:phoneSouthernIllinois] ? @"Y" : @"N");
+
+  // Newfoundland and Labrador Test
+  NSLog(@"Newfoundland");
+  NBPhoneNumber *phoneNewfoundland = [phoneUtil parse:@"879-382-0118" defaultRegion:@"US" error:nil];
+  NSLog(@"- isValidNumber %@", [phoneUtil isValidNumber:phoneNewfoundland] ? @"Y" : @"N");
+  NSLog(@"- isPossibleNumber %@", [phoneUtil isPossibleNumber:phoneNewfoundland] ? @"Y" : @"N");
 }
 
 - (NSString *)stringWithRandomNumber {
